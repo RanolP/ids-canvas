@@ -1,0 +1,10 @@
+
+body {
+    font-size: 1.2rem;
+}
+
+.ids {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+}
