@@ -4,6 +4,7 @@
         elements.forEach((element) => renderIDSInElement(element))
         
         const $input = document.getElementById('input');
+        $input.value = $input.value.trim();
         const $output = document.getElementById('output');
         function updateOutput() {
             $output.innerText = $input.value;
