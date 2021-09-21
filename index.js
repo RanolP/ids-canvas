@@ -1,5 +1,5 @@
 (() => {
-    window.addEventListener('load', () => {
+    window.addEventListener('load', function () {
         const elements = document.querySelectorAll('.convert')
         elements.forEach((element) => renderIDSInElement(element))
     })
@@ -7,7 +7,7 @@
     const $input = document.getElementById('input');
     const $output = document.getElementById('output');
     
-    $input.addEventListener('input', function() {
+    $input.addEventListener('input', function () {
         $output.innerText = $input.value;
         renderIDSInElement($output);
     })
