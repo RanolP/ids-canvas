@@ -31,7 +31,7 @@
     const ctx = canvas.getContext('2d')
     canvas.width = 256
     canvas.height = 256
-    const renderIDSInElement = (element) => {
+    function renderIDSInElement(element) {
         if(element.nodeType == Node.TEXT_NODE) {
             const result = []
             let text = ''
@@ -63,7 +63,7 @@
             element.childNodes.forEach((child) => renderIDSInElement(child))
         }
     }
-    const renderIDS = (ctx, string) => {
+    function renderIDS(ctx, string) {
         const c = string.charAt(0)
         const size = ctx.canvas.height
         if(Object.keys(idcs).includes(c)) {
