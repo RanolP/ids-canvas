@@ -5,11 +5,13 @@
         
         const $input = document.getElementById('input');
         const $output = document.getElementById('output');
-
-        $input.addEventListener('input', function () {
+        function updateOutput() {
             $output.innerText = $input.value;
             renderIDSInElement($output);
-        })
+        }
+
+        $input.addEventListener('input', updateOutput)
+        updateOutput()
     })
 
     const idcs = {
