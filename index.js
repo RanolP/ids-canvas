@@ -3,6 +3,15 @@
         const elements = document.querySelectorAll('.convert')
         elements.forEach((element) => renderIDSInElement(element))
     })
+    
+    const $input = document.getElementById('input');
+    const $output = document.getElementById('output');
+    
+    $input.addEventListener('input', () => {
+        $output.innerText = $input.value;
+        renderIDSInElement($output);
+    })
+    
     const idcs = {
         '⿰': [[0, 0, 1/2, 1], [1/2, 0, 1/2, 1]],
         '⿱': [[0, 0, 1, 1/2], [0, 1/2, 1, 1/2]],
